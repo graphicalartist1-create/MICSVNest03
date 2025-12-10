@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import GenerationControls from "@/components/GenerationControls";
 import FileUpload from "@/components/FileUpload";
 import ResultsPanel from "@/components/ResultsPanel";
+import ExportDialog from "@/components/ExportDialog";
 
 interface GenerationSettings {
   titleLength: number;
