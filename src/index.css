@@ -2,89 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 220 25% 6%;
-    --foreground: 200 20% 90%;
-
-    --card: 220 22% 9%;
-    --card-foreground: 200 20% 90%;
-
-    --popover: 220 22% 9%;
-    --popover-foreground: 200 20% 90%;
-
-    --primary: 177 70% 50%;
-    --primary-foreground: 220 20% 10%;
-
-    --secondary: 220 15% 18%;
-    --secondary-foreground: 200 20% 90%;
-
-    --muted: 220 15% 20%;
-    --muted-foreground: 200 10% 55%;
-
-    --accent: 177 70% 50%;
-    --accent-foreground: 220 20% 10%;
-
-    --destructive: 0 70% 50%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.6%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.6%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.6%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 9.0%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
-
-    --border: 220 15% 22%;
-    --input: 220 15% 18%;
-    --ring: 177 70% 50%;
-
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.6%;
     --radius: 0.5rem;
-
-    --sidebar-background: 220 22% 7%;
-    --sidebar-foreground: 200 20% 90%;
-    --sidebar-primary: 177 70% 50%;
-    --sidebar-primary-foreground: 220 20% 10%;
-    --sidebar-accent: 220 15% 18%;
-    --sidebar-accent-foreground: 200 20% 90%;
-    --sidebar-border: 220 15% 22%;
-    --sidebar-ring: 177 70% 50%;
+    --cyan-500: 0.89 1.022 0.96;
+    --cyan-600: 0.86 0.975 0.925;
   }
 
   .dark {
-    --background: 220 25% 6%;
-    --foreground: 200 20% 90%;
-
-    --card: 220 22% 9%;
-    --card-foreground: 200 20% 90%;
-
-    --popover: 220 22% 9%;
-    --popover-foreground: 200 20% 90%;
-
-    --primary: 177 70% 50%;
-    --primary-foreground: 220 20% 10%;
-
-    --secondary: 220 15% 18%;
-    --secondary-foreground: 200 20% 90%;
-
-    --muted: 220 15% 20%;
-    --muted-foreground: 200 10% 55%;
-
-    --accent: 177 70% 50%;
-    --accent-foreground: 220 20% 10%;
-
-    --destructive: 0 70% 50%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 220 15% 22%;
-    --input: 220 15% 18%;
-    --ring: 177 70% 50%;
-
-    --sidebar-background: 220 22% 7%;
-    --sidebar-foreground: 200 20% 90%;
-    --sidebar-primary: 177 70% 50%;
-    --sidebar-primary-foreground: 220 20% 10%;
-    --sidebar-accent: 220 15% 18%;
-    --sidebar-accent-foreground: 200 20% 90%;
-    --sidebar-border: 220 15% 22%;
-    --sidebar-ring: 177 70% 50%;
+    --background: 0 0% 3.6%;
+    --foreground: 0 0% 98.2%;
+    --card: 0 0% 3.6%;
+    --card-foreground: 0 0% 98.2%;
+    --popover: 0 0% 3.6%;
+    --popover-foreground: 0 0% 98.2%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 98.2%;
+    --accent-foreground: 0 0% 3.6%;
+    --destructive: 0 86.3% 60.4%;
+    --destructive-foreground: 0 0% 3.6%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
   }
 }
 
@@ -92,8 +47,35 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-in-out;
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-in-out;
 }
