@@ -1,17 +1,10 @@
-import { User } from "lucide-react";
+import { Code2 } from "lucide-react";
 
 const DeveloperBadge = () => {
   return (
-    <div className="fixed bottom-6 right-6 z-50">
-      <div className="flex items-center gap-3 bg-card border border-border rounded-lg px-4 py-3 shadow-lg">
-        <div className="h-10 w-10 rounded-full bg-secondary flex items-center justify-center">
-          <User className="h-5 w-5 text-primary" />
-        </div>
-        <div className="flex flex-col">
-          <span className="text-xs text-muted-foreground">Developed By</span>
-          <span className="text-sm font-medium text-primary">Mazharul Islam</span>
-        </div>
-      </div>
+    <div className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-card border border-border rounded-lg px-4 py-2 shadow-lg">
+      <Code2 className="h-4 w-4 text-primary" />
+      <span className="text-xs text-muted-foreground">MICSVNest v3.0</span>
     </div>
   );
 };
